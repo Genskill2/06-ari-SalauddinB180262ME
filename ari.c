@@ -1,50 +1,46 @@
-string ari(string s)
+string ari(string);
+
+string ari(string a)
 {
-  int  w, sent, c=0;
-  for( int i =0; i++; s[i]!=0)
-  {
-    if(islanum(s[i])
-      c++;
-     if(s[i] = 32)
-     w++;
-     if(s[i] = 46)
-     sent++;
+ 
+ int w=0,s=0,c=0;
+ for(int i=0;i<strlen(a);i++)
+    {   
+   if(isalnum(a[i]))
+     c++;
+    
+   if(a[i]==' ')
+    w++;
+   else if(a[i]=='.' || a[i]=='?')
+    s++;
+    else if(a[i]=='!')
+    s++;
     }
-    float result = (4.71*c/w) + (0.5*w/s) - 21.43;
-     result = ceil(result);
-     if( result ==1)
-     return "Kindergarten";
-     if(result==2)
-     return "First/Second Grade";
-     if(result==3)
-     return "Third Grade";
-     if(result==4)
-      return "Fourth Grade";
-     if(result==5)
-    return "Fifth Grade";
-     if(result==6)
-      return"Sixth Grade";
-     if(result==7)
-     return "Seventh Grade";
-     if(result==8)
-     return " Eigth Grade";
+ 
+ float sum = (4.71*(float)(c)/w)+(0.5*((float)(w)/s))-21.43;
+
+
+     int b = (int)(sum);
+     if(sum/(float)(b)>1)
+     b++;
      
-     
-     if(result==9)
-     return "Ninth Grade";
-     
-     if(result==10)
-     return "Tenth Grade";
-     
-     if(result==11)
-     return "Eleventh Grade";
-     if(result==12)
-     return "Twelfth grade";
-     
-     if(result==13)
-     return "College student"; 
-     if(result==14)
-      return "Professor";
-      }
-     
-     
+   switch(b){
+
+     case  1: return"Kindergarten";
+     case  2:return "First/Second Grade";
+     case  3: return "Third Grade";
+     case  4: return "Fourth Grade";
+     case  5: return " Fifth Grade";
+     case  6: return "Sixth Grade";
+     case  7: return "Seventh Grade";
+     case  8: return "Eighth Grade";
+     case  9: return "Ninth Grade";
+     case  10: return "Tenth Grade";
+     case  11: return "Eleventh Grade";
+     case  12: return "Twelfth grade";
+     case  13: return "College student";
+     case  14: return "Professor";
+     }
+   
+
+}

@@ -4,7 +4,6 @@
 #include <cs50.h>
 #include <ctype.h>
 
-string grade (int);
 string ari(string);
 
 string ari(string a)
@@ -26,9 +25,12 @@ string ari(string a)
  
  float sum = (4.71*(float)(c)/w)+(0.5*((float)(w)/s))-21.43;
 
- string grade(int sum) {
+
+     int b = (int)(sum);
+     if(sum/(float)(b)>1)
+     b++;
      
-   switch(sum){
+   switch(b){
 
      case  1: return"Kindergarten";
      case  2:return "First/Second Grade";
@@ -45,8 +47,6 @@ string ari(string a)
      case  13: return "College student";
      case  14: return "Professor";
      }
-  } 
-  a= grade((int)(sum)+1);
-  
-  return a;
+   
+
 }

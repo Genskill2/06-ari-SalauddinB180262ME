@@ -1,6 +1,12 @@
-#include <math.h>
+#include <stdio.h>
+#include <assert.h>
+#include <string.h>
+#include <cs50.h>
 #include <ctype.h>
-typedef string ari(string);
+
+string grade (int);
+string ari(string);
+
 string ari(string a)
 {
  
@@ -20,12 +26,9 @@ string ari(string a)
  
  float sum = (4.71*(float)(c)/w)+(0.5*((float)(w)/s))-21.43;
 
-
-     int b = (int)(sum);
-     if(sum/(float)(b)>1)
-     b++;
+ string grade(int sum) {
      
-   switch(b){
+   switch(sum){
 
      case  1: return"Kindergarten";
      case  2:return "First/Second Grade";
@@ -42,6 +45,8 @@ string ari(string a)
      case  13: return "College student";
      case  14: return "Professor";
      }
-   
-
+  } 
+  a= grade((int)(sum)+1);
+  
+  return a;
 }

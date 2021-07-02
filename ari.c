@@ -1,3 +1,5 @@
+#include <math.h>
+#include <ctype.>
 string ari(string);
 
 string ari(string a)

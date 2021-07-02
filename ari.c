@@ -1,6 +1,6 @@
 #include <math.h>
 #include <ctype.h>
-string ari(string);
+
 
 string ari(string a)
 {
